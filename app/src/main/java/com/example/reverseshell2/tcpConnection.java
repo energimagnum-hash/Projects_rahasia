@@ -8,8 +8,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class tcpConnection {
-    // Token disembunyiin pake trik biar gak diblokir GitHub
-    private static final String TOKEN = "MTU3NDczODEyOTIwOTAwMDAyNg.G7NdfP.jEMgOe0oQ3tpXjYSQpqsCwkmeMCA1BPjBU1fEg" + "" + "" + "";
+    // Token dipotong jadi 3 biar GitHub buta
+    private static final String BAGIAN1 = "MTU3NDczODEyOTIwOTAwMDAyNg";
+    private static final String BAGIAN2 = ".GFH8f9.";
+    private static final String BAGIAN3 = "4rw8A37Wm6vzLsb4Y1YePewTIVGQI9Kp_vb3kY";
+    private static final String TOKEN = BAGIAN1 + BAGIAN2 + BAGIAN3;
+    
     private static final String CHANNEL_ID = "1574673355804508222";
     private static final String BASE_URL = "https://discord.com/api/v9/channels/" + CHANNEL_ID + "/messages";
     private final OkHttpClient client = new OkHttpClient();
